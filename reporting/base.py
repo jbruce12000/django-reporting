@@ -290,6 +290,8 @@ class Report(object):
     
     def split_annotate_titles(self, items):
         data, titles = [], []
+        if items is None:
+            return data,titles
         for item in items:
             if len(item) == 3:
                 data.append(item[:2])
